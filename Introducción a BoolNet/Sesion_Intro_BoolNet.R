@@ -1,27 +1,27 @@
-# Titulo 
+# Titulo: Introducci√≥n a BoolNet 
 
-# Nombre: BiologÌa de sistemas
+# Nombre: Biolog√≠a de sistemas
 
 # Fecha: Febrero 2021
 ####################################################################################
 
 # entrar a R (Rstudio)
-# asÌ ponemos comentarios - esto no lo lo ve R
+# as√≠ ponemos comentarios - esto no lo lo ve R
 
-# revisa en quÈ directorio est·s:
+# revisa en qu√© directorio est√°s:
 getwd() 
 
 # ir a donde queremos estar (ojo con las diagonales / )
-setwd("C:/Users/Elisa/Dropbox/Docencia adscripciÛn biomÈdicas/Bio Mates PCBIOL 2021 1/Pr·cticas computacionales/1 Intro a BoolNet")
+setwd("C:/Users/Elisa/Dropbox/Docencia adscripci√≥n biom√©dicas/Bio Mates PCBIOL 2021 1/Pr√°cticas computacionales/1 Intro a BoolNet")
 
-# utiliza la funciÛn help() para pedir ayuda
-# ejemplo, si quieres pedir ayuda sobre cÛmo usar la funciÛn print() escribe:
+# utiliza la funci√≥n help() para pedir ayuda
+# ejemplo, si quieres pedir ayuda sobre c√≥mo usar la funci√≥n print() escribe:
 help("print") 
 
 # ojo - necesitamos internet para cargar paquetes
 install.packages("BoolNet") 
 
-# cargar (invocar) la librerÌa
+# cargar (invocar) la librer√≠a
 library(BoolNet) 
 
 
@@ -41,21 +41,21 @@ attr
 plotAttractors(attr)
 
 # perturbar la red
-# asumir que el gen c siempre est· apagado
+# asumir que el gen c siempre est√° apagado
 mut = getAttractors(net, genesOFF=c(0,0,1))
 mut
 
-# mostrar atractores con la mutaciÛn
+# mostrar atractores con la mutaci√≥n
 plotAttractors(mut,drawLegend = F)
 
-# empezamos en (1,0,0) y preguntamos a quÈ atractor vamos a llegar
+# empezamos en (1,0,0) y preguntamos a qu√© atractor vamos a llegar
 getPathToAttractor(net, c(1,0,0)) 
 
 
 plotStateGraph(attr, piecewise=TRUE)
 
-# nota: actualizaciÛn asÌncrona; fuente de ruido. repetir varias veces y ver si resultados
-# coinciden con sÌncrono, para descartar que resultados sean artefactos del mÈtodo computacional
+# nota: actualizaci√≥n as√≠ncrona; fuente de ruido. repetir varias veces y ver si resultados
+# coinciden con s√≠ncrono, para descartar que resultados sean artefactos del m√©todo computacional
 
 att_asymchron = getAttractors(net, type="asynchronous") # asynchronament
 
@@ -65,7 +65,7 @@ plotAttractors(att_asymchron)
 # % www.colomoto.org/
 
 
-## Ahora veremos quÈ pasa con un atractor cÌclico
+## Ahora veremos qu√© pasa con un atractor c√≠clico
 cell_cyle <- loadNetwork("cellcycle.txt")
 cell_cyle
 
